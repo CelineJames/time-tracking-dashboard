@@ -1,0 +1,328 @@
+:root{
+    --main-bg-color: #0f1424;
+    --primary-blue : #1c1f4a;
+    --accent-blue : #5847eb;
+    --text-blue : #bdc1ff;
+
+    --soft-blue-play : #56c2e6;
+    --light-orange-work : #ff8c66;
+    --light-red-study : #ff5c7c;
+    --light-green-excercise : #4acf81;
+    --violet-social : #7536d3;
+    --soft-orange-selfcare : #f1c65b;
+
+    --main-fontsize : 16px;
+    --fontsize-title : 24px;
+    --fontsize-small : 12px;
+
+    --border-radius : 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+     font-family: "Rubik", serif;
+     background-color: var(--main-bg-color);
+     max-width: 100vw;
+     min-height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+#grid-container{
+    width: 700px;
+    max-width: 1300px; 
+    height: 340px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+
+    div{
+        border-radius: var(--border-radius);
+        position: relative;
+    }
+
+}
+
+#jeremy{
+    grid-row: span 2 ;
+    background-color: var(--primary-blue);
+    color: white;
+    
+    img{
+       
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid white;
+        margin-bottom: 1.5rem;
+    }
+
+    ul{
+        margin: 1.5rem;
+    }
+
+    li{
+        list-style: none;
+        margin-top: .5rem;
+        font-size: var(--fontsize-small);
+        font-weight: 100;
+    }
+
+    li:hover{
+        cursor: pointer;
+        color: var(--accent-blue);
+    }
+
+}
+
+#work{
+    background-color: var(--light-orange-work);
+  background-image: url("../images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-position: top right;
+}
+
+#play{
+   background-color: var(--soft-blue-play);
+  background-image: url("../images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-position: top right;
+}
+
+#study{
+  background-color: var(--light-red-study);
+  background-image: url("../images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-position: top right;
+}
+
+#excercise{
+   background-color: var(--light-green-excercise);
+  background-image: url("../images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-position: top right;
+}
+
+#social{
+  background-color: var(--violet-social);
+  background-image: url("../images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-position: top right;
+
+}
+
+#self-care{
+   background-color: var(--soft-orange-selfcare);
+  background-image: url("../images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-position: top right;
+}
+
+.shadow-box{
+    /* position: absolute; */
+    top: 21%;
+    background-color: var(--primary-blue);
+    width: 100%;
+    height: 80%;
+    padding: 1rem 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 100;
+    /* border-radius: var(--border-radius); */
+    
+}
+
+.shadow-box:hover{
+    cursor: pointer;
+    background-color: #1f2a80;
+}
+
+.shadow-boxxx{
+   background-color: var(--accent-blue);
+   height: 70%;
+   top: 0;
+   padding: 2rem 2rem 2rem 1.5rem;
+
+   h6{
+    font-size: var(--fontsize-small);
+    font-weight: 100;
+   }
+
+   h1{
+    font-size: var(--fontsize-title);
+    font-weight: 100;
+   }
+}
+
+.heading-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    img{
+        width: 15px;
+        height: 100%;
+    }
+
+    h6{
+        font-size: var(--fontsize-small);
+        font-weight: 100;
+    }
+}
+
+.time-div{
+    h2{
+        font-size: var(--fontsize-title);
+        font-weight: 100;
+        margin-bottom: .5rem;
+    }
+
+    p{
+        font-size: var(--fontsize-small);
+        font-weight: 100;
+    }
+}
+
+
+
+/* media queries */
+
+@media only screen and (max-width: 500px){
+
+    #grid-container{
+    width: 90%;
+    max-width: 500px; 
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(2, 1fr); */
+    gap: 10px;
+    padding: 1.2rem 1rem;
+
+    div{
+        border-radius: var(--border-radius);
+        position: relative;
+    }
+
+}
+
+#jeremy{
+    grid-row: span 1 ;
+    
+    img{
+       
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid white;
+        margin-bottom: 1.5rem;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li{
+        margin-top: 0;
+    }
+
+}
+
+.shadow-box{
+    /* position: absolute; */
+    top: 21%;
+    background-color: var(--primary-blue);
+    width: 100%;
+    height: 80%;
+    padding: 1rem 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 100;
+    /* border-radius: var(--border-radius); */
+    
+}
+
+.shadow-box:hover{
+    cursor: pointer;
+    background-color: #1f2a80;
+}
+
+.shadow-boxxx{
+   background-color: var(--accent-blue);
+   height: 65%;
+   display: flex;
+   gap: 1rem;
+   top: 0;
+   padding: 1.5rem;
+   padding-bottom: 0;
+
+   h6{
+    font-size: var(--fontsize-small);
+    font-weight: 100;
+    margin-top: .4rem;
+   }
+
+   h1{
+    font-size: var(--fontsize-title);
+    font-weight: 100;
+   }
+}
+
+.heading-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+
+    img{
+        width: 15px;
+        height: 100%;
+    }
+
+    h6{
+        font-size: var(--fontsize-small);
+        font-weight: 100;
+    }
+}
+
+.time-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    h2{
+        font-size: var(--fontsize-title);
+        font-weight: 100;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        font-size: var(--fontsize-small);
+        font-weight: 100;
+    }
+}
+
+
+}
+
+
+.attribution { font-size: 11px; text-align: center; color : hsl(228, 39%, 80%) ;}
+    .attribution a { color: hsl(228, 39%, 80%); } 

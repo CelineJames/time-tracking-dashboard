@@ -1,1 +1,2 @@
-# time-tracking-dashboard
+# Frontend Mentor - Time tracking dashboard solution
+
